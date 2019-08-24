@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParentService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backend</a> &gt; <a href="index.source.html" class="el_package">com.fsd.backend.Service</a> &gt; <span class="el_source">ParentService.java</span></div><h1>ParentService.java</h1><pre class="source lang-java linenums">package com.fsd.backend.Service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import com.fsd.backend.Entity.ParentTask;
+import com.fsd.backend.Repository.ParentTaskRepo;
+import com.google.common.collect.Lists;
+
+/**
+ * The Class ParentService.
+ *
+ * @author AK
+ */
+@Service
+@Transactional
+public class ParentService {
+
+	/** The log. */
+<span class="fc" id="L25">	private final Logger log = LoggerFactory.getLogger(ParentService.class);</span>
+
+	/** The parent repo. */
+	private final ParentTaskRepo parentRepo;
+
+	/**
+	 * Instantiates a new parent service.
+	 *
+	 * @param parentRepo
+	 *            the parent repo
+	 */
+<span class="fc" id="L36">	public ParentService(ParentTaskRepo parentRepo) {</span>
+<span class="fc" id="L37">		this.parentRepo = parentRepo;</span>
+<span class="fc" id="L38">	}</span>
+
+	/**
+	 * Adds the parent task.
+	 *
+	 * @param parent
+	 *            the parent
+	 * @return the parent task
+	 */
+	public ParentTask addParentTask(ParentTask parent) {
+
+<span class="fc" id="L49">		log.debug(&quot;===========================================&quot;);</span>
+<span class="fc" id="L50">		log.debug(&quot;Inside Class Name: Parent Service &quot;);</span>
+<span class="fc" id="L51">		log.debug(&quot;Inside Method Name: addParentTask&quot;);</span>
+<span class="fc" id="L52">		log.debug(&quot;===========================================&quot;);</span>
+<span class="fc" id="L53">		ParentTask i = parentRepo.save(parent);</span>
+<span class="fc" id="L54">		return i;</span>
+	}
+
+	/**
+	 * Gets the all parent.
+	 *
+	 * @return the all parent
+	 */
+	public List&lt;ParentTask&gt; getAllParent() {
+<span class="fc" id="L63">		log.debug(&quot;===========================================&quot;);</span>
+<span class="fc" id="L64">		log.debug(&quot;Inside Class Name: Parent Service &quot;);</span>
+<span class="fc" id="L65">		log.debug(&quot;Inside Method Name: getAllParents &quot;);</span>
+<span class="fc" id="L66">		log.debug(&quot;===========================================&quot;);</span>
+<span class="fc" id="L67">		Iterable&lt;ParentTask&gt; parentTask = parentRepo.findAll();</span>
+<span class="fc" id="L68">		List&lt;ParentTask&gt; parentTaskList = Lists.newArrayList(parentTask);</span>
+<span class="fc" id="L69">		return parentTaskList;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

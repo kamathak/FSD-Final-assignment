@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backend</a> &gt; <a href="index.source.html" class="el_package">com.fsd.backend.Entity</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.fsd.backend.Entity;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+
+/**
+ * The Class User.
+ */
+/**
+ * @author AK
+ *
+ */
+@Entity
+public class User implements Serializable {
+
+	/** The user id. */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@NotNull
+	private long userId;
+
+	/** The first name. */
+	@NotNull
+	private String firstName;
+
+	/** The last name. */
+	@NotNull
+	private String lastName;
+
+	/** The employee id. */
+	@NotNull
+	private String employeeId;
+
+	/** The task. */
+<span class="pc" id="L45">	@OneToMany</span>
+	@JoinTable(name = &quot;TASK_ID&quot;, joinColumns = @JoinColumn(name = &quot;USER_ID&quot;), inverseJoinColumns = @JoinColumn(name = &quot;TASK_ID&quot;))
+	private List&lt;Task&gt; task = new ArrayList();
+
+	/** The project. */
+<span class="pc" id="L50">	@OneToMany</span>
+	@JoinTable(name = &quot;PROJECT_ID&quot;, joinColumns = @JoinColumn(name = &quot;USER_ID&quot;), inverseJoinColumns = @JoinColumn(name = &quot;PROJECT_ID&quot;))
+	private List&lt;Project&gt; project = new ArrayList();
+
+	/**
+	 * Instantiates a new user.
+	 */
+<span class="fc" id="L57">	public User() {</span>
+<span class="fc" id="L58">	}</span>
+
+	/**
+	 * Instantiates a new user.
+	 *
+	 * @param userId
+	 *            the user id
+	 * @param firstName
+	 *            the first name
+	 * @param lastName
+	 *            the last name
+	 * @param employeeId
+	 *            the employee id
+	 * @param task
+	 *            the task
+	 * @param project
+	 *            the project
+	 */
+	public User(@NotNull long userId, @NotNull String firstName, @NotNull String lastName, @NotNull String employeeId,
+			List&lt;Task&gt; task, List&lt;Project&gt; project) {
+<span class="nc" id="L78">		super();</span>
+<span class="nc" id="L79">		this.userId = userId;</span>
+<span class="nc" id="L80">		this.firstName = firstName;</span>
+<span class="nc" id="L81">		this.lastName = lastName;</span>
+<span class="nc" id="L82">		this.employeeId = employeeId;</span>
+<span class="nc" id="L83">		this.task = task;</span>
+<span class="nc" id="L84">		this.project = project;</span>
+<span class="nc" id="L85">	}</span>
+
+	/**
+	 * Gets the user id.
+	 *
+	 * @return the user id
+	 */
+	public long getUserId() {
+<span class="fc" id="L93">		return userId;</span>
+	}
+
+	/**
+	 * Sets the user id.
+	 *
+	 * @param userId
+	 *            the new user id
+	 */
+	public void setUserId(long userId) {
+<span class="fc" id="L103">		this.userId = userId;</span>
+<span class="fc" id="L104">	}</span>
+
+	/**
+	 * Gets the first name.
+	 *
+	 * @return the first name
+	 */
+	public String getFirstName() {
+<span class="fc" id="L112">		return firstName;</span>
+	}
+
+	/**
+	 * Sets the first name.
+	 *
+	 * @param firstName
+	 *            the new first name
+	 */
+	public void setFirstName(String firstName) {
+<span class="fc" id="L122">		this.firstName = firstName;</span>
+<span class="fc" id="L123">	}</span>
+
+	/**
+	 * Gets the last name.
+	 *
+	 * @return the last name
+	 */
+	public String getLastName() {
+<span class="fc" id="L131">		return lastName;</span>
+	}
+
+	/**
+	 * Sets the last name.
+	 *
+	 * @param lastName
+	 *            the new last name
+	 */
+	public void setLastName(String lastName) {
+<span class="fc" id="L141">		this.lastName = lastName;</span>
+<span class="fc" id="L142">	}</span>
+
+	/**
+	 * Gets the employee id.
+	 *
+	 * @return the employee id
+	 */
+	public String getEmployeeId() {
+<span class="fc" id="L150">		return employeeId;</span>
+	}
+
+	/**
+	 * Sets the employee id.
+	 *
+	 * @param employeeId
+	 *            the new employee id
+	 */
+	public void setEmployeeId(String employeeId) {
+<span class="fc" id="L160">		this.employeeId = employeeId;</span>
+<span class="fc" id="L161">	}</span>
+
+	/**
+	 * Gets the task.
+	 *
+	 * @return the task
+	 */
+	public List&lt;Task&gt; getTask() {
+<span class="fc" id="L169">		return task;</span>
+	}
+
+	/**
+	 * Sets the task.
+	 *
+	 * @param task
+	 *            the new task
+	 */
+	public void setTask(List&lt;Task&gt; task) {
+<span class="fc" id="L179">		this.task = task;</span>
+<span class="fc" id="L180">	}</span>
+
+	/**
+	 * Gets the project.
+	 *
+	 * @return the project
+	 */
+	public List&lt;Project&gt; getProject() {
+<span class="fc" id="L188">		return project;</span>
+	}
+
+	/**
+	 * Sets the project.
+	 *
+	 * @param project
+	 *            the new project
+	 */
+	public void setProject(List&lt;Project&gt; project) {
+<span class="fc" id="L198">		this.project = project;</span>
+<span class="fc" id="L199">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
