@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -42,7 +43,8 @@ public class ProjectRepositoryTest {
 	private Project returnProject = null;
 
 	/** The project string. */
-	private String projectString = "{\"projectId\":1,\"project\":\"Project\",\"startDate\":\"2019-05-27\",\"endDate\":\"2019-05-29\",\"priority\":1}";
+	@Value("${testcase.project1}")
+	private String projectString;
 
 	/**
 	 * Creates the project.

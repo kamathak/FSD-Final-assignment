@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -42,7 +43,8 @@ public class TaskRepositoryTest {
 	private Task returnTask = null;
 
 	/** The task string. */
-	private String taskString = "{\"taskId\":1,\"task\":\"Task\",\"priority\":1,\"startDate\":\"2019-05-27\",\"endDate\":\"2019-05-27\",\"parentTask\":{\"parentTaskId\":1,\"parentTask\":\"Parent Task\"},\"project\":{\"projectId\":1,\"project\":\"Project\",\"startDate\":\"2019-05-27\",\"endDate\":\"2019-05-29\",\"priority\":1,\"task\":[],\"user\":null},\"user\":{\"userId\":1,\"firstName\":\"Test\",\"lastName\":\"Lname\",\"employeeId\":\"1000\",\"task\":null,\"project\":null},\"status\":\"complete\"}";
+	@Value("${testcase.task1}")
+	private String taskString;
 
 	/**
 	 * Creates the task.

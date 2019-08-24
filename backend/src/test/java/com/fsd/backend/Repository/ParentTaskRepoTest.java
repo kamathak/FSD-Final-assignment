@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -38,7 +39,8 @@ public class ParentTaskRepoTest {
 	private ParentTaskRepo parentRepo;
 
 	/** The parent task string. */
-	private String parentTaskString = "{" + "\"parentTaskId\":1," + "\"parentTask\":\"parentTask\"" + "}";
+	@Value("${testcase.parenttask1}")
+	private String parentTaskString;
 
 	/** The parent task. */
 	private ParentTask parentTask;

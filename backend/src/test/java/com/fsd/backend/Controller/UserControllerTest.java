@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -64,16 +65,16 @@ public class UserControllerTest {
 	private UserService userService;
 
 	/** The user 1. */
-
-	private String user1 = "{\"employeeId\": \"1\", \"firstName\": \"Fname1\",\"lastName\": \"Lname1\"}";
+	@Value("${testcase.user1}")
+	private String user1;
 
 	/** The test user 1. */
 
 	private User testUser1 = new User();
 
 	/** The user 2. */
-
-	private String user2 = "{\"employeeId\": \"2\", \"firstName\": \"Fname2\",\"lastName\": \"Lname2\"}";
+	@Value("${testcase.user2}")
+	private String user2;
 
 	/** The test user 2. */
 
@@ -293,10 +294,8 @@ public class UserControllerTest {
 		Mockito.when(userService.findUserById((Mockito.any(Long.class)))).thenReturn(testUser1);
 		Mockito.when(userService.addUser(Mockito.any(User.class))).thenReturn(testUser1);
 		Mockito.when(userService.deleteUser((Mockito.any(User.class)))).thenReturn(testUser1);
-		RequestBuilder reqBuilder = MockMvcRequestBuilders.post(restURI)
-				.accept(MediaType.APPLICATION_JSON)
-				.content(expectedJson)
-				.contentType(MediaType.APPLICATION_JSON);
+		RequestBuilder reqBuilder = MockMvcRequestBuilders.post(restURI).accept(MediaType.APPLICATION_JSON)
+				.content(expectedJson).contentType(MediaType.APPLICATION_JSON);
 		MvcResult mvcResult = mockMvc.perform(reqBuilder).andReturn();
 		MockHttpServletResponse mockresponse = mvcResult.getResponse();
 		return mockresponse.getContentAsString();
@@ -328,8 +327,7 @@ public class UserControllerTest {
 		Mockito.when(userService.findUserById((Mockito.any(Long.class)))).thenReturn(testUser1);
 		Mockito.when(userService.addUser(Mockito.any(User.class))).thenReturn(testUser1);
 		Mockito.when(userService.deleteUser((Mockito.any(User.class)))).thenReturn(testUser1);
-		RequestBuilder reqBuilder = MockMvcRequestBuilders.get(restURI)
-				.accept(MediaType.APPLICATION_JSON)
+		RequestBuilder reqBuilder = MockMvcRequestBuilders.get(restURI).accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON);
 		MvcResult mvcResult = mockMvc.perform(reqBuilder).andReturn();
 		MockHttpServletResponse mockresponse = mvcResult.getResponse();

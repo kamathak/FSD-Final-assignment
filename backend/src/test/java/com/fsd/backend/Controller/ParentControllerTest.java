@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -64,20 +65,20 @@ public class ParentControllerTest {
 	private ParentService parentService;
 
 	/** The parent task1. */
-
+	
 	private ParentTask parentTask1 = null;
+	
 	/** The parent task2. */
-
+	
 	private ParentTask parentTask2 = null;
 
 	/** The parent task string 1. */
-
-	private String parentTaskString1 = "{" + "\"parentTaskId\":1," + "\"parentTask\":\"PT1\"" + "}";
+	@Value("${testcase.parenttask1}")
+	private String parentTaskString1;
 
 	/** The parent task string 1. */
-
-	private String parentTaskString2 = "{" + "\"parentTaskId\":2," + "\"parentTask\":\"PT2\"" + "}";
-
+	@Value("${testcase.parenttask2}")
+	private String parentTaskString2;
 
 	/** The parent list. */
 
@@ -230,13 +231,10 @@ public class ParentControllerTest {
 	 * 
 	 */
 
-	private String returnExpectedJson(String expectedJson, String restURI) throws Exception
-	{
+	private String returnExpectedJson(String expectedJson, String restURI) throws Exception {
 		Mockito.when(parentService.addParentTask(Mockito.any(ParentTask.class))).thenReturn(parentTask1);
-		RequestBuilder reqBuilder = MockMvcRequestBuilders.post(restURI)
-				.accept(MediaType.APPLICATION_JSON)
-				.content(expectedJson)
-				.contentType(MediaType.APPLICATION_JSON);
+		RequestBuilder reqBuilder = MockMvcRequestBuilders.post(restURI).accept(MediaType.APPLICATION_JSON)
+				.content(expectedJson).contentType(MediaType.APPLICATION_JSON);
 		MvcResult mvcResult = mockMvc.perform(reqBuilder).andReturn();
 		MockHttpServletResponse mockresponse = mvcResult.getResponse();
 

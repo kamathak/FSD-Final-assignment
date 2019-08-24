@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -57,12 +58,12 @@ public class ParentServiceTest {
 	private ParentTask parentTask2 = null;
 
 	/** The parent task string 1. */
+	@Value("${testcase.parenttask1}")
+	private String parentTaskString1;
 
-	private String parentTaskString1 = "{" + "\"parentTaskId\":1," + "\"parentTask\":\"PT1\"" + "}";
-
-	/** The parent task string 1. */
-
-	private String parentTaskString2 = "{" + "\"parentTaskId\":2," + "\"parentTask\":\"PT2\"" + "}";
+	/** The parent task string 2. */
+	@Value("${testcase.parenttask2}")
+	private String parentTaskString2;
 
 	/** The parent list. */
 

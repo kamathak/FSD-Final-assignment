@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -64,16 +65,16 @@ public class ProjectControllerTest {
 	private Project project1 = new Project();;
 
 	/** The project string 1. */
-
-	private String projectString1 = "{\"projectId\":1,\"project\":\"P1\",\"startDate\":\"2019-07-27\",\"endDate\":\"2019-08-27\",\"priority\":1}";
+	@Value("${testcase.project1}")
+	private String projectString1;
 
 	/** The project 2. */
 
 	private Project project2 = new Project();;
 
 	/** The project string 2. */
-
-	private String projectString2 = "{\"projectId\":2,\"project\":\"P2\",\"startDate\":\"2019-07-28\",\"endDate\":\"2019-08-28\",\"priority\":2}";
+	@Value("${testcase.project2}")
+	private String projectString2;
 
 	private List<Project> projectList = new ArrayList();
 
@@ -100,7 +101,7 @@ public class ProjectControllerTest {
 
 	{
 		project1 = createObject(projectString1);
-		project2 = createObject(projectString1);
+		project2 = createObject(projectString2);
 		projectList.add(project1);
 		projectList.add(project2);
 

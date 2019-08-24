@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -49,16 +50,16 @@ public class UserServiceTest {
 	private UserRepo urepo;
 
 	/** The user 1. */
-
-	private String user1 = "{\"employeeId\": \"1\", \"firstName\": \"Fname1\",\"lastName\": \"Lname1\"}";
+	@Value("${testcase.user2}")
+	private String user1 ;
 
 	/** The test user 1. */
 
 	private User testUser1 = new User();
 
 	/** The user 2. */
-
-	private String user2 = "{\"employeeId\": \"2\", \"firstName\": \"Fname2\",\"lastName\": \"Lname2\"}";
+	@Value("${testcase.user2}")
+	private String user2 ;
 
 	/** The test user 2. */
 

@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -66,16 +67,16 @@ public class TaskControllerTest {
 	private TaskController taskcontroller;
 
 	/** The task string 1. */
-
-	private String taskString = "{\"taskId\":1,\"task\":\"Task\",\"priority\":1,\"startDate\":\"2019-05-27\",\"endDate\":\"2019-05-27\",\"parentTask\":{\"parentTaskId\":1,\"parentTask\":\"Parent Task\"},\"project\":{\"projectId\":1,\"project\":\"Project\",\"startDate\":\"2019-05-27\",\"endDate\":\"2019-05-29\",\"priority\":1,\"task\":[],\"user\":null},\"user\":{\"userId\":1,\"firstName\":\"Test\",\"lastName\":\"Lname\",\"employeeId\":\"1000\",\"task\":null,\"project\":null},\"status\":\"complete\"}";
+	@Value("${testcase.task1}")
+	private String taskString;
 
 	/** The task 1. */
 
 	private Task task1 = new Task();
 
 	/** The task string 2. */
-
-	private String taskString2 = "{\"taskId\":2,\"task\":\"Task\",\"priority\":2,\"startDate\":\"2019-08-27\",\"endDate\":\"2019-08-27\",\"parentTask\":{\"parentTaskId\":1,\"parentTask\":\"Parent Task\"},\"project\":{\"projectId\":1,\"project\":\"Project\",\"startDate\":\"2019-08-27\",\"endDate\":\"2019-08-29\",\"priority\":1,\"task\":[],\"user\":null},\"user\":{\"userId\":1,\"firstName\":\"Test\",\"lastName\":\"Lname\",\"employeeId\":\"1000\",\"task\":null,\"project\":null},\"status\":\"complete\"}";
+	@Value("${testcase.task2}")
+	private String taskString2;
 	/** The task 2. */
 
 	private Task task2 = new Task();

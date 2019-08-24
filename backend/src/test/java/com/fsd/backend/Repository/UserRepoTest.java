@@ -9,8 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -30,14 +30,11 @@ import com.fsd.backend.Entity.User;
 @EnableTransactionManagement
 public class UserRepoTest {
 
-
-	@Autowired
-	private TestEntityManager em;
-
 	@Autowired
 	private UserRepo userRepo;
-
-	private String testUser = "{\"employeeId\": \"12345\", \"firstName\": \"Fname1\",\"lastName\": \"Lname1\"}";
+	
+	@Value("${testcase.user1}")
+	private String testUser;
 
 	private User user = null;
 

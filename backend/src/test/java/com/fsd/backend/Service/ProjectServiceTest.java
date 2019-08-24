@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -21,7 +22,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fsd.backend.Entity.Project;
 import com.fsd.backend.Repository.ProjectRepository;
-
 
 /**
 
@@ -53,19 +53,19 @@ public class ProjectServiceTest {
 
 	/** The project 1. */
 
-	private Project project1 = new Project();;
+	private Project project1 = new Project();
 
 	/** The project string 1. */
-
-	private String projectString1 = "{\"projectId\":1,\"project\":\"P1\",\"startDate\":\"2019-07-27\",\"endDate\":\"2019-08-27\",\"priority\":1}";
+	@Value("${testcase.project1}")
+	private String projectString1;
 
 	/** The project 2. */
 
-	private Project project2 = new Project();;
+	private Project project2 = new Project();
 
 	/** The project string 2. */
-
-	private String projectString2 = "{\"projectId\":2,\"project\":\"P2\",\"startDate\":\"2019-07-28\",\"endDate\":\"2019-08-28\",\"priority\":2}";
+	@Value("${testcase.project2}")
+	private String projectString2;
 
 	/** The project list. */
 
@@ -88,7 +88,7 @@ public class ProjectServiceTest {
 
 	{
 		project1 = createObject(projectString1);
-		project2 = createObject(projectString1);
+		project2 = createObject(projectString2);
 		projectList.add(project1);
 		projectList.add(project2);
 
