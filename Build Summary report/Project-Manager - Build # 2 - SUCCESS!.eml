@@ -1,0 +1,1317 @@
+Return-Path: <akaaskak@gmail.com>
+Received: from 172.18.5.170 ([180.151.37.162])
+        by smtp.gmail.com with ESMTPSA id dw7sm9190436pjb.21.2019.08.17.23.14.02
+        for <akaaskak@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Sat, 17 Aug 2019 23:14:03 -0700 (PDT)
+From: Build User <akaaskak@gmail.com>
+X-Google-Original-From: Build User <BuildUser@gmail.com>
+Date: Sun, 18 Aug 2019 11:41:25 +0530 (IST)
+To: akaaskak@gmail.com
+Message-ID: <1658655822.1.1566108692298.JavaMail.Admin@Javafs>
+Subject: Project-Manager - Build # 2 - SUCCESS!
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_1710668894.1566108685667"
+X-Jenkins-Job: Project-Manager
+
+------=_Part_0_1710668894.1566108685667
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi FSD User,
+       <br/>
+       Build for the Project-Manager  has been triggered. PFB below the details of the same.
+       <br/>
+       The build logs have been attached with the email for your reference.
+       <br/>
+       <ul>  
+        <li>Build Id: # 2 </li>
+        <li>Build Number: SUCCESS</li>
+       </ul>
+       <br/> 
+        For more detailed results access the same via: <strong> http://localhost:8080/job/Project-Manager/2/ </strong>
+        <br/>
+        Regards,
+        <br/>
+        Ashwin Kamath - Jenkins Admin
+------=_Part_0_1710668894.1566108685667
+Content-Type: application/octet-stream; name=build.log
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment; filename=build.log
+
+Started by an SCM change
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] node
+Running on Jenkins in C:\Users\Admin\.jenkins\workspace\Project-Manager
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Code Checkout: Final Assignment)
+[Pipeline] git
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeo=
+ut=3D10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github=
+.com/kamathak/FSD-Final-assignment.git # timeout=3D10
+Fetching upstream changes from https://github.com/kamathak/FSD-Final-assign=
+ment.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=3D10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.=
+com/kamathak/FSD-Final-assignment.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{=
+commit}" # timeout=3D10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/m=
+aster^{commit}" # timeout=3D10
+Checking out Revision 25b730ce12d397b5826b932b7bb438e95930930e (refs/remote=
+s/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=3D=
+10
+ > C:\Program Files\Git\bin\git.exe checkout -f 25b730ce12d397b5826b932b7bb=
+438e95930930e
+ > C:\Program Files\Git\bin\git.exe branch -a -v --no-abbrev # timeout=3D10
+ > C:\Program Files\Git\bin\git.exe branch -D master # timeout=3D10
+ > C:\Program Files\Git\bin\git.exe checkout -b master 25b730ce12d397b5826b=
+932b7bb438e95930930e
+Commit message: "Added junits for Backend Services"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 46147833873d4a4a8a4e=
+cf7f0bdbcd9fd0ac90ac # timeout=3D10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build SpringBoot app)
+[Pipeline] bat
+
+C:\Users\Admin\.jenkins\workspace\Project-Manager>mvn clean install -f back=
+end=20
+[INFO] Scanning for projects...
+[INFO]=20
+[INFO] --------------------------< com.fsd:backend >-----------------------=
+----
+[INFO] Building backend 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]-----------------------------=
+----
+[INFO]=20
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ backend ---
+[INFO] Deleting C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\t=
+arget
+[INFO]=20
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ bac=
+kend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ backend =
+---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to C:\Users\Admin\.jenkins\workspace\Proje=
+ct-Manager\backend\target\classes
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/main/=
+java/com/fsd/backend/Entity/Project.java: Some input files use unchecked or=
+ unsafe operations.
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/main/=
+java/com/fsd/backend/Entity/Project.java: Recompile with -Xlint:unchecked f=
+or details.
+[INFO]=20
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResource=
+s) @ backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ =
+backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to C:\Users\Admin\.jenkins\workspace\Projec=
+t-Manager\backend\target\test-classes
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/test/=
+java/com/fsd/backend/Service/ProjectServiceTest.java: Some input files use =
+unchecked or unsafe operations.
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/test/=
+java/com/fsd/backend/Service/ProjectServiceTest.java: Recompile with -Xlint=
+:unchecked for details.
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ backend ---
+[INFO]=20
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fsd.backend.BackendTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D|_|=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D|_=
+__/=3D/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-18 11:39:44.813  INFO 259208 --- [           main] com.fsd.backend.=
+BackendApplication       : Starting BackendApplication on Javafs with PID 2=
+59208 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manage=
+r\backend)
+2019-08-18 11:39:44.818 DEBUG 259208 --- [           main] com.fsd.backend.=
+BackendApplication       : Running with Spring Boot v2.1.4.RELEASE, Spring =
+v5.1.6.RELEASE
+2019-08-18 11:39:44.819  INFO 259208 --- [           main] com.fsd.backend.=
+BackendApplication       : No active profile set, falling back to default p=
+rofiles: default
+2019-08-18 11:39:49.947  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAUL=
+T mode.
+2019-08-18 11:39:50.195  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Finished Spring Data repository scanning in 209m=
+s. Found 4 repository interfaces.
+2019-08-18 11:39:52.615  INFO 259208 --- [           main] trationDelegate$=
+BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation=
+.ProxyTransactionManagementConfiguration' of type [org.springframework.tran=
+saction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySprin=
+gCGLIB$$84187f5d] is not eligible for getting processed by all BeanPostProc=
+essors (for example: not eligible for auto-proxying)
+2019-08-18 11:39:54.877  INFO 259208 --- [           main] o.s.b.w.embedded=
+.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-08-18 11:39:55.096  INFO 259208 --- [           main] o.apache.catalin=
+a.core.StandardService   : Starting service [Tomcat]
+2019-08-18 11:39:55.096  INFO 259208 --- [           main] org.apache.catal=
+ina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-08-18 11:39:56.276  INFO 259208 --- [           main] org.apache.jaspe=
+r.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contai=
+ned no TLDs. Enable debug logging for this logger for a complete list of JA=
+Rs that were scanned but no TLDs were found in them. Skipping unneeded JARs=
+ during scanning can improve startup time and JSP compilation time.
+2019-08-18 11:39:56.286  INFO 259208 --- [           main] o.a.c.c.C.[Tomca=
+t].[localhost].[/]       : Initializing Spring embedded WebApplicationConte=
+xt
+2019-08-18 11:39:56.288  INFO 259208 --- [           main] o.s.web.context.=
+ContextLoader            : Root WebApplicationContext: initialization compl=
+eted in 10323 ms
+2019-08-18 11:39:58.267  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-18 11:39:58.611  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-18 11:39:59.966  INFO 259208 --- [           main] o.hibernate.jpa.=
+internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+=09name: default
+=09...]
+2019-08-18 11:40:00.294  INFO 259208 --- [           main] org.hibernate.Ve=
+rsion                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-08-18 11:40:00.310  INFO 259208 --- [           main] org.hibernate.cf=
+g.Environment            : HHH000206: hibernate.properties not found
+2019-08-18 11:40:02.123  INFO 259208 --- [           main] o.hibernate.anno=
+tations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.=
+4.Final}
+2019-08-18 11:40:02.764  INFO 259208 --- [           main] org.hibernate.di=
+alect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.=
+H2Dialect
+Hibernate: drop table parent_task if exists
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table parent_task (parent_task_id bigint not null, parent=
+_task varchar(255) not null, primary key (parent_task_id))
+Hibernate: create table project (project_id bigint generated by default as =
+identity, end_date date, priority integer not null, project varchar(255), s=
+tart_date date, user_user_id bigint, primary key (project_id))
+Hibernate: create table project_id (user_id bigint not null, project_id big=
+int not null)
+Hibernate: create table task (task_id bigint generated by default as identi=
+ty, end_date date not null, priority integer not null, start_date date not =
+null, status varchar(255) not null, task varchar(255) not null, parent_task=
+_parent_task_id bigint not null, project_project_id bigint not null, user_u=
+ser_id bigint not null, primary key (task_id))
+Hibernate: create table task_id (user_id bigint not null, task_id bigint no=
+t null, project_id bigint not null)
+Hibernate: create table user (user_id bigint generated by default as identi=
+ty, employee_id varchar(255) not null, first_name varchar(255) not null, la=
+st_name varchar(255) not null, primary key (user_id))
+Hibernate: alter table project_id add constraint UK_rvuvfy1y5dfti02hryk0vpa=
+ni unique (project_id)
+Hibernate: alter table task add constraint UK_mnjbilmcb2rvo6ucahakeelsr uni=
+que (parent_task_parent_task_id)
+Hibernate: alter table task_id add constraint UK_46mf8aoxbfjopc38i9mjd50oj =
+unique (task_id)
+Hibernate: alter table project add constraint FKid2j2pfrqbmhl31xkvkeb57o3 f=
+oreign key (user_user_id) references user
+Hibernate: alter table project_id add constraint FKd7i2v2hvk387bbnq3hn66rpa=
+p foreign key (project_id) references project
+Hibernate: alter table project_id add constraint FKqipnq0dp3t63j7wi821ifga2=
+o foreign key (user_id) references user
+Hibernate: alter table task add constraint FKpolyaiqftuc6y50acsrsom2qg fore=
+ign key (parent_task_parent_task_id) references parent_task
+Hibernate: alter table task add constraint FKeerx3epqnbyihu6v2rx89cy13 fore=
+ign key (project_project_id) references project
+Hibernate: alter table task add constraint FK4ordojk2hmfawex6xkaqhynvj fore=
+ign key (user_user_id) references user
+Hibernate: alter table task_id add constraint FKr232mau1tbh0qoj33q5t9viqa f=
+oreign key (task_id) references task
+Hibernate: alter table task_id add constraint FK56jrrmcvmsc1hrwxjasd344fb f=
+oreign key (user_id) references user
+Hibernate: alter table task_id add constraint FKc8byk5y75v30pdxkqd9e94uuv f=
+oreign key (project_id) references project
+2019-08-18 11:40:05.990  INFO 259208 --- [           main] o.h.t.schema.int=
+ernal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernat=
+e.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@8f57e4c'
+2019-08-18 11:40:05.995  INFO 259208 --- [           main] j.LocalContainer=
+EntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persist=
+ence unit 'default'
+2019-08-18 11:40:15.363  INFO 259208 --- [           main] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExe=
+cutor'
+2019-08-18 11:40:16.173  WARN 259208 --- [           main] aWebConfiguratio=
+n$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. T=
+herefore, database queries may be performed during view rendering. Explicit=
+ly configure spring.jpa.open-in-view to disable this warning
+2019-08-18 11:40:21.351  INFO 259208 --- [           main] o.s.b.w.embedded=
+.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with cont=
+ext path ''
+2019-08-18 11:40:21.356  INFO 259208 --- [           main] com.fsd.backend.=
+BackendApplication       : Started BackendApplication in 39.177 seconds (JV=
+M running for 40.389)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.8=
+6 s - in com.fsd.backend.BackendTest
+[INFO] Running com.fsd.backend.Service.ParentServiceTest
+2019-08-18 11:40:21.490  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierar=
+chy found for test class [com.fsd.backend.Service.ParentServiceTest], using=
+ SpringBootContextLoader
+2019-08-18 11:40:21.491  INFO 259208 --- [           main] o.s.t.c.support.=
+AbstractContextLoader    : Could not detect default resource locations for =
+test class [com.fsd.backend.Service.ParentServiceTest]: no resource found f=
+or suffixes {-context.xml, Context.groovy}.
+2019-08-18 11:40:21.492  INFO 259208 --- [           main] t.c.s.Annotation=
+ConfigContextLoaderUtils : Could not detect default configuration classes f=
+or test class [com.fsd.backend.Service.ParentServiceTest]: ParentServiceTes=
+t does not declare any static, non-private, non-final, nested classes annot=
+ated with @Configuration.
+2019-08-18 11:40:21.586  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Found @SpringBootConfiguration com.fsd.backend.B=
+ackendApplication for test class com.fsd.backend.Service.ParentServiceTest
+2019-08-18 11:40:21.598  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Loaded default TestExecutionListener class names=
+ from location [META-INF/spring.factories]: [org.springframework.boot.test.=
+mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mo=
+ck.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.a=
+utoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.bo=
+ot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionLis=
+tener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrint=
+OnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfi=
+gure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.c=
+ontext.web.ServletTestExecutionListener, org.springframework.test.context.s=
+upport.DirtiesContextBeforeModesTestExecutionListener, org.springframework.=
+test.context.support.DependencyInjectionTestExecutionListener, org.springfr=
+amework.test.context.support.DirtiesContextTestExecutionListener, org.sprin=
+gframework.test.context.transaction.TransactionalTestExecutionListener, org=
+.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-18 11:40:21.611  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Using TestExecutionListeners: [org.springframewo=
+rk.test.context.web.ServletTestExecutionListener@6851b296, org.springframew=
+ork.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9e5=
+0283, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListen=
+er@5368e981, org.springframework.boot.test.autoconfigure.SpringBootDependen=
+cyInjectionTestExecutionListener@1c171746, org.springframework.test.context=
+.support.DirtiesContextTestExecutionListener@79b7c350, org.springframework.=
+test.context.transaction.TransactionalTestExecutionListener@586737ff, org.s=
+pringframework.test.context.jdbc.SqlScriptsTestExecutionListener@4cd7e993, =
+org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@=
+685e6a68, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTest=
+ExecutionListener@2fb48970, org.springframework.boot.test.autoconfigure.web=
+.client.MockRestServiceServerResetTestExecutionListener@4e8d9bb6, org.sprin=
+gframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTes=
+tExecutionListener@3de56885, org.springframework.boot.test.autoconfigure.we=
+b.servlet.WebDriverTestExecutionListener@2673487b]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D|_|=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D|_=
+__/=3D/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-18 11:40:21.676  INFO 259208 --- [           main] c.fsd.backend.Se=
+rvice.ParentServiceTest  : Starting ParentServiceTest on Javafs with PID 25=
+9208 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manager=
+\backend)
+2019-08-18 11:40:21.676 DEBUG 259208 --- [           main] c.fsd.backend.Se=
+rvice.ParentServiceTest  : Running with Spring Boot v2.1.4.RELEASE, Spring =
+v5.1.6.RELEASE
+2019-08-18 11:40:21.677  INFO 259208 --- [           main] c.fsd.backend.Se=
+rvice.ParentServiceTest  : No active profile set, falling back to default p=
+rofiles: default
+2019-08-18 11:40:24.169  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAUL=
+T mode.
+2019-08-18 11:40:24.231  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Finished Spring Data repository scanning in 62ms=
+. Found 4 repository interfaces.
+2019-08-18 11:40:25.496  INFO 259208 --- [           main] trationDelegate$=
+BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation=
+.ProxyTransactionManagementConfiguration' of type [org.springframework.tran=
+saction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySprin=
+gCGLIB$$84187f5d] is not eligible for getting processed by all BeanPostProc=
+essors (for example: not eligible for auto-proxying)
+2019-08-18 11:40:25.918  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-2 - Starting...
+2019-08-18 11:40:26.152  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-2 - Start completed.
+2019-08-18 11:40:26.346  INFO 259208 --- [           main] o.hibernate.jpa.=
+internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+=09name: default
+=09...]
+2019-08-18 11:40:26.367  INFO 259208 --- [           main] org.hibernate.di=
+alect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.=
+H2Dialect
+Hibernate: drop table parent_task if exists
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table parent_task (parent_task_id bigint not null, parent=
+_task varchar(255) not null, primary key (parent_task_id))
+Hibernate: create table project (project_id bigint generated by default as =
+identity, end_date date, priority integer not null, project varchar(255), s=
+tart_date date, user_user_id bigint, primary key (project_id))
+Hibernate: create table project_id (user_id bigint not null, project_id big=
+int not null)
+Hibernate: create table task (task_id bigint generated by default as identi=
+ty, end_date date not null, priority integer not null, start_date date not =
+null, status varchar(255) not null, task varchar(255) not null, parent_task=
+_parent_task_id bigint not null, project_project_id bigint not null, user_u=
+ser_id bigint not null, primary key (task_id))
+Hibernate: create table task_id (user_id bigint not null, task_id bigint no=
+t null, project_id bigint not null)
+Hibernate: create table user (user_id bigint generated by default as identi=
+ty, employee_id varchar(255) not null, first_name varchar(255) not null, la=
+st_name varchar(255) not null, primary key (user_id))
+Hibernate: alter table project_id add constraint UK_rvuvfy1y5dfti02hryk0vpa=
+ni unique (project_id)
+Hibernate: alter table task add constraint UK_mnjbilmcb2rvo6ucahakeelsr uni=
+que (parent_task_parent_task_id)
+Hibernate: alter table task_id add constraint UK_46mf8aoxbfjopc38i9mjd50oj =
+unique (task_id)
+Hibernate: alter table project add constraint FKid2j2pfrqbmhl31xkvkeb57o3 f=
+oreign key (user_user_id) references user
+Hibernate: alter table project_id add constraint FKd7i2v2hvk387bbnq3hn66rpa=
+p foreign key (project_id) references project
+Hibernate: alter table project_id add constraint FKqipnq0dp3t63j7wi821ifga2=
+o foreign key (user_id) references user
+Hibernate: alter table task add constraint FKpolyaiqftuc6y50acsrsom2qg fore=
+ign key (parent_task_parent_task_id) references parent_task
+Hibernate: alter table task add constraint FKeerx3epqnbyihu6v2rx89cy13 fore=
+ign key (project_project_id) references project
+Hibernate: alter table task add constraint FK4ordojk2hmfawex6xkaqhynvj fore=
+ign key (user_user_id) references user
+Hibernate: alter table task_id add constraint FKr232mau1tbh0qoj33q5t9viqa f=
+oreign key (task_id) references task
+Hibernate: alter table task_id add constraint FK56jrrmcvmsc1hrwxjasd344fb f=
+oreign key (user_id) references user
+Hibernate: alter table task_id add constraint FKc8byk5y75v30pdxkqd9e94uuv f=
+oreign key (project_id) references project
+2019-08-18 11:40:26.755  INFO 259208 --- [           main] o.h.t.schema.int=
+ernal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernat=
+e.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@8f57e4c'
+2019-08-18 11:40:26.759  INFO 259208 --- [           main] j.LocalContainer=
+EntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persist=
+ence unit 'default'
+2019-08-18 11:40:30.499  INFO 259208 --- [           main] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExe=
+cutor'
+2019-08-18 11:40:30.546  WARN 259208 --- [           main] aWebConfiguratio=
+n$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. T=
+herefore, database queries may be performed during view rendering. Explicit=
+ly configure spring.jpa.open-in-view to disable this warning
+2019-08-18 11:40:33.062  INFO 259208 --- [           main] c.fsd.backend.Se=
+rvice.ParentServiceTest  : Started ParentServiceTest in 11.435 seconds (JVM=
+ running for 52.088)
+2019-08-18 11:40:33.277 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:33.277 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : Inside Class Name: Parent Service=20
+2019-08-18 11:40:33.277 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : Inside Method Name: addParentTask
+2019-08-18 11:40:33.277 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:33.292 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:33.292 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : Inside Class Name: Parent Service=20
+2019-08-18 11:40:33.292 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : Inside Method Name: getAllParents=20
+2019-08-18 11:40:33.292 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ParentService    : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.9=
+2 s - in com.fsd.backend.Service.ParentServiceTest
+[INFO] Running com.fsd.backend.Service.ProjectServiceTest
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierar=
+chy found for test class [com.fsd.backend.Service.ProjectServiceTest], usin=
+g SpringBootContextLoader
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] o.s.t.c.support.=
+AbstractContextLoader    : Could not detect default resource locations for =
+test class [com.fsd.backend.Service.ProjectServiceTest]: no resource found =
+for suffixes {-context.xml, Context.groovy}.
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] t.c.s.Annotation=
+ConfigContextLoaderUtils : Could not detect default configuration classes f=
+or test class [com.fsd.backend.Service.ProjectServiceTest]: ProjectServiceT=
+est does not declare any static, non-private, non-final, nested classes ann=
+otated with @Configuration.
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Found @SpringBootConfiguration com.fsd.backend.B=
+ackendApplication for test class com.fsd.backend.Service.ProjectServiceTest
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Loaded default TestExecutionListener class names=
+ from location [META-INF/spring.factories]: [org.springframework.boot.test.=
+mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mo=
+ck.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.a=
+utoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.bo=
+ot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionLis=
+tener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrint=
+OnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfi=
+gure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.c=
+ontext.web.ServletTestExecutionListener, org.springframework.test.context.s=
+upport.DirtiesContextBeforeModesTestExecutionListener, org.springframework.=
+test.context.support.DependencyInjectionTestExecutionListener, org.springfr=
+amework.test.context.support.DirtiesContextTestExecutionListener, org.sprin=
+gframework.test.context.transaction.TransactionalTestExecutionListener, org=
+.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-18 11:40:33.323  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Using TestExecutionListeners: [org.springframewo=
+rk.test.context.web.ServletTestExecutionListener@2aa0feb2, org.springframew=
+ork.test.context.support.DirtiesContextBeforeModesTestExecutionListener@351=
+c6341, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListe=
+ner@32069394, org.springframework.boot.test.autoconfigure.SpringBootDepende=
+ncyInjectionTestExecutionListener@70421a08, org.springframework.test.contex=
+t.support.DirtiesContextTestExecutionListener@5dba3fdc, org.springframework=
+.test.context.transaction.TransactionalTestExecutionListener@bea5941, org.s=
+pringframework.test.context.jdbc.SqlScriptsTestExecutionListener@df6f19b, o=
+rg.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6=
+d842877, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestE=
+xecutionListener@614cbec4, org.springframework.boot.test.autoconfigure.web.=
+client.MockRestServiceServerResetTestExecutionListener@3835d3fd, org.spring=
+framework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTest=
+ExecutionListener@2759749, org.springframework.boot.test.autoconfigure.web.=
+servlet.WebDriverTestExecutionListener@4efed0e0]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D|_|=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D|_=
+__/=3D/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-18 11:40:33.355  INFO 259208 --- [           main] c.f.backend.Serv=
+ice.ProjectServiceTest   : Starting ProjectServiceTest on Javafs with PID 2=
+59208 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manage=
+r\backend)
+2019-08-18 11:40:33.355 DEBUG 259208 --- [           main] c.f.backend.Serv=
+ice.ProjectServiceTest   : Running with Spring Boot v2.1.4.RELEASE, Spring =
+v5.1.6.RELEASE
+2019-08-18 11:40:33.355  INFO 259208 --- [           main] c.f.backend.Serv=
+ice.ProjectServiceTest   : No active profile set, falling back to default p=
+rofiles: default
+2019-08-18 11:40:35.661  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAUL=
+T mode.
+2019-08-18 11:40:35.842  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Finished Spring Data repository scanning in 181m=
+s. Found 4 repository interfaces.
+2019-08-18 11:40:36.349  INFO 259208 --- [           main] trationDelegate$=
+BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation=
+.ProxyTransactionManagementConfiguration' of type [org.springframework.tran=
+saction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySprin=
+gCGLIB$$84187f5d] is not eligible for getting processed by all BeanPostProc=
+essors (for example: not eligible for auto-proxying)
+2019-08-18 11:40:36.885  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-3 - Starting...
+2019-08-18 11:40:36.887  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-3 - Start completed.
+2019-08-18 11:40:37.180  INFO 259208 --- [           main] o.hibernate.jpa.=
+internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+=09name: default
+=09...]
+2019-08-18 11:40:37.190  INFO 259208 --- [           main] org.hibernate.di=
+alect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.=
+H2Dialect
+Hibernate: drop table parent_task if exists
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table parent_task (parent_task_id bigint not null, parent=
+_task varchar(255) not null, primary key (parent_task_id))
+Hibernate: create table project (project_id bigint generated by default as =
+identity, end_date date, priority integer not null, project varchar(255), s=
+tart_date date, user_user_id bigint, primary key (project_id))
+Hibernate: create table project_id (user_id bigint not null, project_id big=
+int not null)
+Hibernate: create table task (task_id bigint generated by default as identi=
+ty, end_date date not null, priority integer not null, start_date date not =
+null, status varchar(255) not null, task varchar(255) not null, parent_task=
+_parent_task_id bigint not null, project_project_id bigint not null, user_u=
+ser_id bigint not null, primary key (task_id))
+Hibernate: create table task_id (user_id bigint not null, task_id bigint no=
+t null, project_id bigint not null)
+Hibernate: create table user (user_id bigint generated by default as identi=
+ty, employee_id varchar(255) not null, first_name varchar(255) not null, la=
+st_name varchar(255) not null, primary key (user_id))
+Hibernate: alter table project_id add constraint UK_rvuvfy1y5dfti02hryk0vpa=
+ni unique (project_id)
+Hibernate: alter table task add constraint UK_mnjbilmcb2rvo6ucahakeelsr uni=
+que (parent_task_parent_task_id)
+Hibernate: alter table task_id add constraint UK_46mf8aoxbfjopc38i9mjd50oj =
+unique (task_id)
+Hibernate: alter table project add constraint FKid2j2pfrqbmhl31xkvkeb57o3 f=
+oreign key (user_user_id) references user
+Hibernate: alter table project_id add constraint FKd7i2v2hvk387bbnq3hn66rpa=
+p foreign key (project_id) references project
+Hibernate: alter table project_id add constraint FKqipnq0dp3t63j7wi821ifga2=
+o foreign key (user_id) references user
+Hibernate: alter table task add constraint FKpolyaiqftuc6y50acsrsom2qg fore=
+ign key (parent_task_parent_task_id) references parent_task
+Hibernate: alter table task add constraint FKeerx3epqnbyihu6v2rx89cy13 fore=
+ign key (project_project_id) references project
+Hibernate: alter table task add constraint FK4ordojk2hmfawex6xkaqhynvj fore=
+ign key (user_user_id) references user
+Hibernate: alter table task_id add constraint FKr232mau1tbh0qoj33q5t9viqa f=
+oreign key (task_id) references task
+Hibernate: alter table task_id add constraint FK56jrrmcvmsc1hrwxjasd344fb f=
+oreign key (user_id) references user
+Hibernate: alter table task_id add constraint FKc8byk5y75v30pdxkqd9e94uuv f=
+oreign key (project_id) references project
+2019-08-18 11:40:37.627  INFO 259208 --- [           main] o.h.t.schema.int=
+ernal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernat=
+e.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@8f57e4c'
+2019-08-18 11:40:37.628  INFO 259208 --- [           main] j.LocalContainer=
+EntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persist=
+ence unit 'default'
+2019-08-18 11:40:40.113  INFO 259208 --- [           main] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExe=
+cutor'
+2019-08-18 11:40:40.143  WARN 259208 --- [           main] aWebConfiguratio=
+n$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. T=
+herefore, database queries may be performed during view rendering. Explicit=
+ly configure spring.jpa.open-in-view to disable this warning
+2019-08-18 11:40:43.646  INFO 259208 --- [           main] c.f.backend.Serv=
+ice.ProjectServiceTest   : Started ProjectServiceTest in 10.323 seconds (JV=
+M running for 62.628)
+2019-08-18 11:40:43.727 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.728 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.728 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: getAllProjects=20
+2019-08-18 11:40:43.728 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.761 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.761 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.761 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: deleteProject=20
+2019-08-18 11:40:43.761 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.781 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.781 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.781 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: findProjectById=20
+2019-08-18 11:40:43.782 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.799 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.799 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.799 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: addProject
+2019-08-18 11:40:43.799 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.814 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.815 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.815 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: findProjectById=20
+2019-08-18 11:40:43.815 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.835 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:43.835 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Class Name: Project Service=20
+2019-08-18 11:40:43.835 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : Inside Method Name: addProject
+2019-08-18 11:40:43.835 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.ProjectService   : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.5=
+2 s - in com.fsd.backend.Service.ProjectServiceTest
+[INFO] Running com.fsd.backend.Service.TaskServiceTest
+2019-08-18 11:40:43.840  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierar=
+chy found for test class [com.fsd.backend.Service.TaskServiceTest], using S=
+pringBootContextLoader
+2019-08-18 11:40:43.840  INFO 259208 --- [           main] o.s.t.c.support.=
+AbstractContextLoader    : Could not detect default resource locations for =
+test class [com.fsd.backend.Service.TaskServiceTest]: no resource found for=
+ suffixes {-context.xml, Context.groovy}.
+2019-08-18 11:40:43.840  INFO 259208 --- [           main] t.c.s.Annotation=
+ConfigContextLoaderUtils : Could not detect default configuration classes f=
+or test class [com.fsd.backend.Service.TaskServiceTest]: TaskServiceTest do=
+es not declare any static, non-private, non-final, nested classes annotated=
+ with @Configuration.
+2019-08-18 11:40:43.860  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Found @SpringBootConfiguration com.fsd.backend.B=
+ackendApplication for test class com.fsd.backend.Service.TaskServiceTest
+2019-08-18 11:40:43.861  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Loaded default TestExecutionListener class names=
+ from location [META-INF/spring.factories]: [org.springframework.boot.test.=
+mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mo=
+ck.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.a=
+utoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.bo=
+ot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionLis=
+tener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrint=
+OnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfi=
+gure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.c=
+ontext.web.ServletTestExecutionListener, org.springframework.test.context.s=
+upport.DirtiesContextBeforeModesTestExecutionListener, org.springframework.=
+test.context.support.DependencyInjectionTestExecutionListener, org.springfr=
+amework.test.context.support.DirtiesContextTestExecutionListener, org.sprin=
+gframework.test.context.transaction.TransactionalTestExecutionListener, org=
+.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-18 11:40:43.861  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Using TestExecutionListeners: [org.springframewo=
+rk.test.context.web.ServletTestExecutionListener@2fa2143d, org.springframew=
+ork.test.context.support.DirtiesContextBeforeModesTestExecutionListener@648=
+87fbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListe=
+ner@26b3fe8, org.springframework.boot.test.autoconfigure.SpringBootDependen=
+cyInjectionTestExecutionListener@1f6d7e7c, org.springframework.test.context=
+.support.DirtiesContextTestExecutionListener@20518250, org.springframework.=
+test.context.transaction.TransactionalTestExecutionListener@7836c79, org.sp=
+ringframework.test.context.jdbc.SqlScriptsTestExecutionListener@5ccc971e, o=
+rg.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2=
+8269c65, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestE=
+xecutionListener@4c9d833, org.springframework.boot.test.autoconfigure.web.c=
+lient.MockRestServiceServerResetTestExecutionListener@18b58c77, org.springf=
+ramework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestE=
+xecutionListener@20f99c18, org.springframework.boot.test.autoconfigure.web.=
+servlet.WebDriverTestExecutionListener@3c20e9d6]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D|_|=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D|_=
+__/=3D/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-18 11:40:43.980  INFO 259208 --- [           main] com.fsd.backend.=
+Service.TaskServiceTest  : Starting TaskServiceTest on Javafs with PID 2592=
+08 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manager\b=
+ackend)
+2019-08-18 11:40:43.980 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskServiceTest  : Running with Spring Boot v2.1.4.RELEASE, Spring =
+v5.1.6.RELEASE
+2019-08-18 11:40:43.980  INFO 259208 --- [           main] com.fsd.backend.=
+Service.TaskServiceTest  : No active profile set, falling back to default p=
+rofiles: default
+2019-08-18 11:40:49.742  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAUL=
+T mode.
+2019-08-18 11:40:49.773  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Finished Spring Data repository scanning in 31ms=
+. Found 4 repository interfaces.
+2019-08-18 11:40:50.756  INFO 259208 --- [           main] trationDelegate$=
+BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation=
+.ProxyTransactionManagementConfiguration' of type [org.springframework.tran=
+saction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySprin=
+gCGLIB$$84187f5d] is not eligible for getting processed by all BeanPostProc=
+essors (for example: not eligible for auto-proxying)
+2019-08-18 11:40:51.615  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-4 - Starting...
+2019-08-18 11:40:51.641  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-4 - Start completed.
+2019-08-18 11:40:51.677  INFO 259208 --- [           main] o.hibernate.jpa.=
+internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+=09name: default
+=09...]
+2019-08-18 11:40:51.733  INFO 259208 --- [           main] org.hibernate.di=
+alect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.=
+H2Dialect
+Hibernate: drop table parent_task if exists
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table parent_task (parent_task_id bigint not null, parent=
+_task varchar(255) not null, primary key (parent_task_id))
+Hibernate: create table project (project_id bigint generated by default as =
+identity, end_date date, priority integer not null, project varchar(255), s=
+tart_date date, user_user_id bigint, primary key (project_id))
+Hibernate: create table project_id (user_id bigint not null, project_id big=
+int not null)
+Hibernate: create table task (task_id bigint generated by default as identi=
+ty, end_date date not null, priority integer not null, start_date date not =
+null, status varchar(255) not null, task varchar(255) not null, parent_task=
+_parent_task_id bigint not null, project_project_id bigint not null, user_u=
+ser_id bigint not null, primary key (task_id))
+Hibernate: create table task_id (user_id bigint not null, task_id bigint no=
+t null, project_id bigint not null)
+Hibernate: create table user (user_id bigint generated by default as identi=
+ty, employee_id varchar(255) not null, first_name varchar(255) not null, la=
+st_name varchar(255) not null, primary key (user_id))
+Hibernate: alter table project_id add constraint UK_rvuvfy1y5dfti02hryk0vpa=
+ni unique (project_id)
+Hibernate: alter table task add constraint UK_mnjbilmcb2rvo6ucahakeelsr uni=
+que (parent_task_parent_task_id)
+Hibernate: alter table task_id add constraint UK_46mf8aoxbfjopc38i9mjd50oj =
+unique (task_id)
+Hibernate: alter table project add constraint FKid2j2pfrqbmhl31xkvkeb57o3 f=
+oreign key (user_user_id) references user
+Hibernate: alter table project_id add constraint FKd7i2v2hvk387bbnq3hn66rpa=
+p foreign key (project_id) references project
+Hibernate: alter table project_id add constraint FKqipnq0dp3t63j7wi821ifga2=
+o foreign key (user_id) references user
+Hibernate: alter table task add constraint FKpolyaiqftuc6y50acsrsom2qg fore=
+ign key (parent_task_parent_task_id) references parent_task
+Hibernate: alter table task add constraint FKeerx3epqnbyihu6v2rx89cy13 fore=
+ign key (project_project_id) references project
+Hibernate: alter table task add constraint FK4ordojk2hmfawex6xkaqhynvj fore=
+ign key (user_user_id) references user
+Hibernate: alter table task_id add constraint FKr232mau1tbh0qoj33q5t9viqa f=
+oreign key (task_id) references task
+Hibernate: alter table task_id add constraint FK56jrrmcvmsc1hrwxjasd344fb f=
+oreign key (user_id) references user
+Hibernate: alter table task_id add constraint FKc8byk5y75v30pdxkqd9e94uuv f=
+oreign key (project_id) references project
+2019-08-18 11:40:52.212  INFO 259208 --- [           main] o.h.t.schema.int=
+ernal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernat=
+e.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@8f57e4c'
+2019-08-18 11:40:52.212  INFO 259208 --- [           main] j.LocalContainer=
+EntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persist=
+ence unit 'default'
+2019-08-18 11:40:54.616  INFO 259208 --- [           main] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExe=
+cutor'
+2019-08-18 11:40:54.641  WARN 259208 --- [           main] aWebConfiguratio=
+n$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. T=
+herefore, database queries may be performed during view rendering. Explicit=
+ly configure spring.jpa.open-in-view to disable this warning
+2019-08-18 11:40:55.899  INFO 259208 --- [           main] com.fsd.backend.=
+Service.TaskServiceTest  : Started TaskServiceTest in 12.035 seconds (JVM r=
+unning for 74.882)
+2019-08-18 11:40:56.068 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.068 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.068 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: deleteTask=20
+2019-08-18 11:40:56.068 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.118 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.118 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.118 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: addTask
+2019-08-18 11:40:56.118 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.137 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.141 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.141 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: findTaskById=20
+2019-08-18 11:40:56.141 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.161 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.161 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.161 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: addTask
+2019-08-18 11:40:56.161 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.230 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.230 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.230 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: findTaskById=20
+2019-08-18 11:40:56.230 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.299 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:40:56.299 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Class Name: Task Service=20
+2019-08-18 11:40:56.300 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : Inside Method Name: getAllTasks=20
+2019-08-18 11:40:56.300 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.TaskService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.4=
+67 s - in com.fsd.backend.Service.TaskServiceTest
+[INFO] Running com.fsd.backend.Service.UserServiceTest
+2019-08-18 11:40:56.316  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierar=
+chy found for test class [com.fsd.backend.Service.UserServiceTest], using S=
+pringBootContextLoader
+2019-08-18 11:40:56.318  INFO 259208 --- [           main] o.s.t.c.support.=
+AbstractContextLoader    : Could not detect default resource locations for =
+test class [com.fsd.backend.Service.UserServiceTest]: no resource found for=
+ suffixes {-context.xml, Context.groovy}.
+2019-08-18 11:40:56.318  INFO 259208 --- [           main] t.c.s.Annotation=
+ConfigContextLoaderUtils : Could not detect default configuration classes f=
+or test class [com.fsd.backend.Service.UserServiceTest]: UserServiceTest do=
+es not declare any static, non-private, non-final, nested classes annotated=
+ with @Configuration.
+2019-08-18 11:40:56.319  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Found @SpringBootConfiguration com.fsd.backend.B=
+ackendApplication for test class com.fsd.backend.Service.UserServiceTest
+2019-08-18 11:40:56.319  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Loaded default TestExecutionListener class names=
+ from location [META-INF/spring.factories]: [org.springframework.boot.test.=
+mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mo=
+ck.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.a=
+utoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.bo=
+ot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionLis=
+tener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrint=
+OnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfi=
+gure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.c=
+ontext.web.ServletTestExecutionListener, org.springframework.test.context.s=
+upport.DirtiesContextBeforeModesTestExecutionListener, org.springframework.=
+test.context.support.DependencyInjectionTestExecutionListener, org.springfr=
+amework.test.context.support.DirtiesContextTestExecutionListener, org.sprin=
+gframework.test.context.transaction.TransactionalTestExecutionListener, org=
+.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-18 11:40:56.319  INFO 259208 --- [           main] .b.t.c.SpringBoo=
+tTestContextBootstrapper : Using TestExecutionListeners: [org.springframewo=
+rk.test.context.web.ServletTestExecutionListener@3922b297, org.springframew=
+ork.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d0=
+2a066, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListe=
+ner@72c1bf75, org.springframework.boot.test.autoconfigure.SpringBootDepende=
+ncyInjectionTestExecutionListener@43a8bd35, org.springframework.test.contex=
+t.support.DirtiesContextTestExecutionListener@6fb219dd, org.springframework=
+.test.context.transaction.TransactionalTestExecutionListener@570b85dd, org.=
+springframework.test.context.jdbc.SqlScriptsTestExecutionListener@28ceb25e,=
+ org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener=
+@2e09e367, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTes=
+tExecutionListener@518a7b8a, org.springframework.boot.test.autoconfigure.we=
+b.client.MockRestServiceServerResetTestExecutionListener@5a24390b, org.spri=
+ngframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTe=
+stExecutionListener@7253c53, org.springframework.boot.test.autoconfigure.we=
+b.servlet.WebDriverTestExecutionListener@66d6e50b]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D|_|=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D|_=
+__/=3D/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-18 11:40:56.580  INFO 259208 --- [           main] com.fsd.backend.=
+Service.UserServiceTest  : Starting UserServiceTest on Javafs with PID 2592=
+08 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manager\b=
+ackend)
+2019-08-18 11:40:56.580 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserServiceTest  : Running with Spring Boot v2.1.4.RELEASE, Spring =
+v5.1.6.RELEASE
+2019-08-18 11:40:56.580  INFO 259208 --- [           main] com.fsd.backend.=
+Service.UserServiceTest  : No active profile set, falling back to default p=
+rofiles: default
+2019-08-18 11:40:58.191  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAUL=
+T mode.
+2019-08-18 11:40:58.215  INFO 259208 --- [           main] .s.d.r.c.Reposit=
+oryConfigurationDelegate : Finished Spring Data repository scanning in 24ms=
+. Found 4 repository interfaces.
+2019-08-18 11:40:58.747  INFO 259208 --- [           main] trationDelegate$=
+BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation=
+.ProxyTransactionManagementConfiguration' of type [org.springframework.tran=
+saction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySprin=
+gCGLIB$$84187f5d] is not eligible for getting processed by all BeanPostProc=
+essors (for example: not eligible for auto-proxying)
+2019-08-18 11:40:59.368  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-5 - Starting...
+2019-08-18 11:40:59.369  INFO 259208 --- [           main] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-5 - Start completed.
+2019-08-18 11:40:59.396  INFO 259208 --- [           main] o.hibernate.jpa.=
+internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+=09name: default
+=09...]
+2019-08-18 11:40:59.451  INFO 259208 --- [           main] org.hibernate.di=
+alect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.=
+H2Dialect
+Hibernate: drop table parent_task if exists
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table parent_task (parent_task_id bigint not null, parent=
+_task varchar(255) not null, primary key (parent_task_id))
+Hibernate: create table project (project_id bigint generated by default as =
+identity, end_date date, priority integer not null, project varchar(255), s=
+tart_date date, user_user_id bigint, primary key (project_id))
+Hibernate: create table project_id (user_id bigint not null, project_id big=
+int not null)
+Hibernate: create table task (task_id bigint generated by default as identi=
+ty, end_date date not null, priority integer not null, start_date date not =
+null, status varchar(255) not null, task varchar(255) not null, parent_task=
+_parent_task_id bigint not null, project_project_id bigint not null, user_u=
+ser_id bigint not null, primary key (task_id))
+Hibernate: create table task_id (user_id bigint not null, task_id bigint no=
+t null, project_id bigint not null)
+Hibernate: create table user (user_id bigint generated by default as identi=
+ty, employee_id varchar(255) not null, first_name varchar(255) not null, la=
+st_name varchar(255) not null, primary key (user_id))
+Hibernate: alter table project_id add constraint UK_rvuvfy1y5dfti02hryk0vpa=
+ni unique (project_id)
+Hibernate: alter table task add constraint UK_mnjbilmcb2rvo6ucahakeelsr uni=
+que (parent_task_parent_task_id)
+Hibernate: alter table task_id add constraint UK_46mf8aoxbfjopc38i9mjd50oj =
+unique (task_id)
+Hibernate: alter table project add constraint FKid2j2pfrqbmhl31xkvkeb57o3 f=
+oreign key (user_user_id) references user
+Hibernate: alter table project_id add constraint FKd7i2v2hvk387bbnq3hn66rpa=
+p foreign key (project_id) references project
+Hibernate: alter table project_id add constraint FKqipnq0dp3t63j7wi821ifga2=
+o foreign key (user_id) references user
+Hibernate: alter table task add constraint FKpolyaiqftuc6y50acsrsom2qg fore=
+ign key (parent_task_parent_task_id) references parent_task
+Hibernate: alter table task add constraint FKeerx3epqnbyihu6v2rx89cy13 fore=
+ign key (project_project_id) references project
+Hibernate: alter table task add constraint FK4ordojk2hmfawex6xkaqhynvj fore=
+ign key (user_user_id) references user
+Hibernate: alter table task_id add constraint FKr232mau1tbh0qoj33q5t9viqa f=
+oreign key (task_id) references task
+Hibernate: alter table task_id add constraint FK56jrrmcvmsc1hrwxjasd344fb f=
+oreign key (user_id) references user
+Hibernate: alter table task_id add constraint FKc8byk5y75v30pdxkqd9e94uuv f=
+oreign key (project_id) references project
+2019-08-18 11:40:59.814  INFO 259208 --- [           main] o.h.t.schema.int=
+ernal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernat=
+e.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@8f57e4c'
+2019-08-18 11:40:59.815  INFO 259208 --- [           main] j.LocalContainer=
+EntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persist=
+ence unit 'default'
+2019-08-18 11:41:01.777  INFO 259208 --- [           main] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExe=
+cutor'
+2019-08-18 11:41:01.835  WARN 259208 --- [           main] aWebConfiguratio=
+n$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. T=
+herefore, database queries may be performed during view rendering. Explicit=
+ly configure spring.jpa.open-in-view to disable this warning
+2019-08-18 11:41:03.474  INFO 259208 --- [           main] com.fsd.backend.=
+Service.UserServiceTest  : Started UserServiceTest in 7.153 seconds (JVM ru=
+nning for 82.457)
+2019-08-18 11:41:03.688 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.688 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.688 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: deleteUser=20
+2019-08-18 11:41:03.688 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.765 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.765 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.765 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: addUser
+2019-08-18 11:41:03.765 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.791 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.791 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.791 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: addUser
+2019-08-18 11:41:03.791 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.839 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.839 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.839 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: findUserById=20
+2019-08-18 11:41:03.839 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.867 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.868 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.868 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: findUserById=20
+2019-08-18 11:41:03.868 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.919 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+2019-08-18 11:41:03.920 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Class Name: User Service=20
+2019-08-18 11:41:03.920 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : Inside Method Name: getAllUsers=20
+2019-08-18 11:41:03.962 DEBUG 259208 --- [           main] com.fsd.backend.=
+Service.UserService      : =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.63=
+9 s - in com.fsd.backend.Service.UserServiceTest
+2019-08-18 11:41:04.298  INFO 259208 --- [       Thread-6] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskEx=
+ecutor'
+2019-08-18 11:41:04.301  INFO 259208 --- [       Thread-6] j.LocalContainer=
+EntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence=
+ unit 'default'
+2019-08-18 11:41:04.304  INFO 259208 --- [       Thread-6] .SchemaDropperIm=
+pl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema =
+as part of SessionFactory shut-down'
+Hibernate: drop table parent_task if exists
+2019-08-18 11:41:04.341  INFO 259208 --- [       Thread-4] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskEx=
+ecutor'
+2019-08-18 11:41:04.342  INFO 259208 --- [       Thread-4] j.LocalContainer=
+EntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence=
+ unit 'default'
+2019-08-18 11:41:04.343  INFO 259208 --- [       Thread-4] .SchemaDropperIm=
+pl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema =
+as part of SessionFactory shut-down'
+Hibernate: drop table parent_task if exists
+2019-08-18 11:41:04.369  INFO 259208 --- [      Thread-12] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskEx=
+ecutor'
+2019-08-18 11:41:04.370  INFO 259208 --- [      Thread-12] j.LocalContainer=
+EntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence=
+ unit 'default'
+2019-08-18 11:41:04.370  INFO 259208 --- [      Thread-12] .SchemaDropperIm=
+pl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema =
+as part of SessionFactory shut-down'
+Hibernate: drop table parent_task if exists
+2019-08-18 11:41:04.371  INFO 259208 --- [      Thread-10] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskEx=
+ecutor'
+2019-08-18 11:41:04.374  INFO 259208 --- [      Thread-10] j.LocalContainer=
+EntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence=
+ unit 'default'
+2019-08-18 11:41:04.375  INFO 259208 --- [      Thread-10] .SchemaDropperIm=
+pl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema =
+as part of SessionFactory shut-down'
+Hibernate: drop table parent_task if exists
+2019-08-18 11:41:04.401  INFO 259208 --- [       Thread-8] o.s.s.concurrent=
+.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskEx=
+ecutor'
+2019-08-18 11:41:04.401  INFO 259208 --- [       Thread-8] j.LocalContainer=
+EntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence=
+ unit 'default'
+2019-08-18 11:41:04.402  INFO 259208 --- [       Thread-8] .SchemaDropperIm=
+pl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema =
+as part of SessionFactory shut-down'
+Hibernate: drop table parent_task if exists
+2019-08-18 11:41:04.410  WARN 259208 --- [      Thread-12] o.h.engine.jdbc.=
+spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-08-18 11:41:04.411 ERROR 259208 --- [      Thread-12] o.h.engine.jdbc.=
+spi.SqlExceptionHelper   : Database is already closed (to disable automatic=
+ closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=3DFALSE" to the db URL) [90=
+121-199]
+2019-08-18 11:41:04.411  WARN 259208 --- [      Thread-12] o.h.engine.jdbc.=
+spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-08-18 11:41:04.411 ERROR 259208 --- [      Thread-12] o.h.engine.jdbc.=
+spi.SqlExceptionHelper   : Database is already closed (to disable automatic=
+ closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=3DFALSE" to the db URL) [90=
+121-199]
+2019-08-18 11:41:04.412  INFO 259208 --- [      Thread-12] o.s.b.f.support.=
+DisposableBeanAdapter    : Invocation of destroy method failed on bean with=
+ name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionExcepti=
+on: Unable to release JDBC Connection used for DDL execution
+2019-08-18 11:41:04.412  INFO 259208 --- [      Thread-12] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+2019-08-18 11:41:04.670  INFO 259208 --- [       Thread-6] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+2019-08-18 11:41:04.706  INFO 259208 --- [      Thread-12] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-5 - Shutdown completed.
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+2019-08-18 11:41:04.729  INFO 259208 --- [      Thread-10] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-08-18 11:41:04.735  INFO 259208 --- [       Thread-4] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+Hibernate: drop table project if exists
+Hibernate: drop table project_id if exists
+Hibernate: drop table task if exists
+Hibernate: drop table task_id if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+2019-08-18 11:41:04.744  INFO 259208 --- [       Thread-6] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-08-18 11:41:04.751  INFO 259208 --- [       Thread-8] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-08-18 11:41:04.801  INFO 259208 --- [      Thread-10] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-08-18 11:41:04.806  INFO 259208 --- [       Thread-8] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-08-18 11:41:04.806  INFO 259208 --- [       Thread-4] com.zaxxer.hikar=
+i.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO]=20
+[INFO] Results:
+[INFO]=20
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO]=20
+[INFO]=20
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ backend ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [backend] in [C:\Users\Admin\.jenkins\workspace\Pr=
+oject-Manager\backend\target\backend-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [753 msecs]
+[INFO] Building war: C:\Users\Admin\.jenkins\workspace\Project-Manager\back=
+end\target\backend-0.0.1-SNAPSHOT.war
+[INFO]=20
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ b=
+ackend ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO]=20
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ backend -=
+--
+[INFO] Installing C:\Users\Admin\.jenkins\workspace\Project-Manager\backend=
+\target\backend-0.0.1-SNAPSHOT.war to C:\Users\Admin\.m2\repository\com\fsd=
+\backend\0.0.1-SNAPSHOT\backend-0.0.1-SNAPSHOT.war
+[INFO] Installing C:\Users\Admin\.jenkins\workspace\Project-Manager\backend=
+\pom.xml to C:\Users\Admin\.m2\repository\com\fsd\backend\0.0.1-SNAPSHOT\ba=
+ckend-0.0.1-SNAPSHOT.pom
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] BUILD SUCCESS
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Total time:  01:59 min
+[INFO] Finished at: 2019-08-18T11:41:22+05:30
+[INFO] --------------------------------------------------------------------=
+----
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Archive Artificats)
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] step
+Recording test results
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Email: Build Summary Report)
+[Pipeline] emailext
+Sending email to: akaaskak@gmail.com
+
+------=_Part_0_1710668894.1566108685667--

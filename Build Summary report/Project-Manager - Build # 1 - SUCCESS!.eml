@@ -1,0 +1,192 @@
+Return-Path: <akaaskak@gmail.com>
+Received: from 172.18.5.170 ([180.151.37.162])
+        by smtp.gmail.com with ESMTPSA id y14sm8230279pge.7.2019.08.17.08.28.05
+        for <akaaskak@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Sat, 17 Aug 2019 08:28:06 -0700 (PDT)
+From: Build User <akaaskak@gmail.com>
+X-Google-Original-From: Build User <BuildUser@gmail.com>
+Date: Sat, 17 Aug 2019 20:56:19 +0530 (IST)
+To: akaaskak@gmail.com
+Message-ID: <1721555220.5.1566055581414.JavaMail.Admin@Javafs>
+Subject: Project-Manager - Build # 1 - SUCCESS!
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4_1398695185.1566055579094"
+X-Jenkins-Job: Project-Manager
+
+------=_Part_4_1398695185.1566055579094
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi FSD User,
+       <br/>
+       Build for the Project-Manager  has been triggered. PFB below the details of the same.
+       <br/>
+       The build logs have been attached with the email for your reference.
+       <br/>
+       <ul>  
+        <li>Build Id: # 1 </li>
+        <li>Build Number: SUCCESS</li>
+       </ul>
+       <br/> 
+        For more detailed results access the same via: <strong> http://localhost:8080/job/Project-Manager/1/ </strong>
+        <br/>
+        Regards,
+        <br/>
+        Ashwin Kamath - Jenkins Admin
+------=_Part_4_1398695185.1566055579094
+Content-Type: application/octet-stream; name=build.log
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename=build.log
+
+Started by an SCM change
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] node
+Running on Jenkins in C:\Users\Admin\.jenkins\workspace\Project-Manager
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Code Checkout: Final Assignment)
+[Pipeline] git
+Cloning the remote Git repository
+Cloning repository https://github.com/kamathak/FSD-Final-assignment.git
+ > C:\Program Files\Git\bin\git.exe init C:\Users\Admin\.jenkins\workspace\Project-Manager # timeout=10
+Fetching upstream changes from https://github.com/kamathak/FSD-Final-assignment.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/kamathak/FSD-Final-assignment.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/kamathak/FSD-Final-assignment.git # timeout=10
+ > C:\Program Files\Git\bin\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/kamathak/FSD-Final-assignment.git # timeout=10
+Fetching upstream changes from https://github.com/kamathak/FSD-Final-assignment.git
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/kamathak/FSD-Final-assignment.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 46147833873d4a4a8a4ecf7f0bdbcd9fd0ac90ac (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 46147833873d4a4a8a4ecf7f0bdbcd9fd0ac90ac
+ > C:\Program Files\Git\bin\git.exe branch -a -v --no-abbrev # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -b master 46147833873d4a4a8a4ecf7f0bdbcd9fd0ac90ac
+Commit message: "code changes for backend Project-Manager application"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build SpringBoot app)
+[Pipeline] bat
+
+C:\Users\Admin\.jenkins\workspace\Project-Manager>mvn clean install -f backend 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.fsd:backend >---------------------------
+[INFO] Building backend 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ backend ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\target\classes
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/main/java/com/fsd/backend/Entity/Project.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Users/Admin/.jenkins/workspace/Project-Manager/backend/src/main/java/com/fsd/backend/Entity/Project.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ backend ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fsd.backend.BackendTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-08-17 20:55:39.926  INFO 126656 --- [           main] com.fsd.backend.BackendApplication       : Starting BackendApplication on Javafs with PID 126656 (started by Admin in C:\Users\Admin\.jenkins\workspace\Project-Manager\backend)
+2019-08-17 20:55:39.975  INFO 126656 --- [           main] com.fsd.backend.BackendApplication       : No active profile set, falling back to default profiles: default
+2019-08-17 20:55:44.879  INFO 126656 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-17 20:55:45.090  INFO 126656 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 195ms. Found 4 repository interfaces.
+2019-08-17 20:55:47.291  INFO 126656 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7991092f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-17 20:55:49.654  INFO 126656 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-08-17 20:55:49.801  INFO 126656 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-17 20:55:49.801  INFO 126656 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-08-17 20:55:50.458  INFO 126656 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-17 20:55:50.473  INFO 126656 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-17 20:55:50.473  INFO 126656 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10279 ms
+2019-08-17 20:55:50.873  INFO 126656 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-17 20:55:51.349  INFO 126656 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-17 20:55:51.574  INFO 126656 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-17 20:55:51.743  INFO 126656 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-08-17 20:55:51.748  INFO 126656 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-17 20:55:52.104  INFO 126656 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-17 20:55:52.386  INFO 126656 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-08-17 20:55:54.141  INFO 126656 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@10ed037a'
+2019-08-17 20:55:54.235  INFO 126656 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-17 20:56:04.333  INFO 126656 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-17 20:56:04.415  WARN 126656 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-17 20:56:08.386  INFO 126656 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-08-17 20:56:08.394  INFO 126656 --- [           main] com.fsd.backend.BackendApplication       : Started BackendApplication in 30.709 seconds (JVM running for 32.077)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.818 s - in com.fsd.backend.BackendTest
+2019-08-17 20:56:08.576  INFO 126656 --- [       Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-17 20:56:08.580  INFO 126656 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-17 20:56:08.582  INFO 126656 --- [       Thread-3] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-08-17 20:56:08.626  INFO 126656 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-17 20:56:08.665  INFO 126656 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ backend ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [backend] in [C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\target\backend-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [1109 msecs]
+[INFO] Building war: C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\target\backend-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ backend ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ backend ---
+[INFO] Installing C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\target\backend-0.0.1-SNAPSHOT.war to C:\Users\Admin\.m2\repository\com\fsd\backend\0.0.1-SNAPSHOT\backend-0.0.1-SNAPSHOT.war
+[INFO] Installing C:\Users\Admin\.jenkins\workspace\Project-Manager\backend\pom.xml to C:\Users\Admin\.m2\repository\com\fsd\backend\0.0.1-SNAPSHOT\backend-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  52.719 s
+[INFO] Finished at: 2019-08-17T20:56:18+05:30
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Archive Artificats)
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] step
+Recording test results
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Email: Build Summary Report)
+[Pipeline] emailext
+Sending email to: akaaskak@gmail.com
+
+------=_Part_4_1398695185.1566055579094--
